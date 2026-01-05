@@ -1,0 +1,9 @@
+-- Problem Link: https://www.hackerrank.com/challenges/the-pads/problem
+SELECT CONCAT(NAME,'(',SUBSTRING(OCCUPATION,1,1),')')
+FROM OCCUPATIONS
+ORDER BY NAME;
+
+SELECT CONCAT('There are a total of ',COUNT(NAME),' ', LOWER(OCCUPATION),'s.')
+FROM OCCUPATIONS
+GROUP BY OCCUPATION
+ORDER BY COUNT(NAME), OCCUPATION;
